@@ -1,5 +1,9 @@
 @use "../../style/index.scss" as *;
 
+.hero {
+  font-size: $size-fluid-2;
+}
+
 .button {
   @include resetLink($gray-0);
   @include transitionAll($duration-pri);
