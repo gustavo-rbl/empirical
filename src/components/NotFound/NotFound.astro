@@ -1,0 +1,24 @@
+---
+import errorImg from "../../assets/img/errorImg.svg";
+import style from "./NotFound.module.scss";
+---
+
+<>
+  <h2>Uh oh...</h2>
+
+  <p>We are experiencing problems</p>
+
+  <p>Please try again later</p>
+
+  <img src={errorImg} alt="Page not found image" />
+
+  <p>
+    While you're here, maybe take a second to learn about: <a
+      href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes"
+      target="_blank"
+      class={style.http}>HTTP status codes</a
+    >
+  </p>
+
+  <a href="/" class={style.button}>No thanks, just take me home</a>
+</>

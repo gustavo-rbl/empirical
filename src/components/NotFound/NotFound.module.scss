@@ -1,0 +1,21 @@
+@use "../../style/index.scss" as *;
+
+.button {
+  @include resetLink($gray-0);
+  @include transitionAll($duration-pri);
+
+  background-color: $indigo-12;
+  padding: calc($size-1 / 2) $size-2;
+  width: max-content;
+  margin: $size-2 auto;
+
+  &:where(:hover, :focus) {
+    background-color: $gray-0;
+    color: $indigo-12;
+    outline: 1px solid $indigo-12;
+  }
+}
+
+.http {
+  color: $indigo-12;
+}
