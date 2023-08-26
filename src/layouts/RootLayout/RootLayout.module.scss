@@ -5,10 +5,6 @@
   height: 100vh;
 }
 
-.container1000 {
-  @include jelloDisplay(1000px, $fontInconsolata, $size-fluid-1, $size-1);
-}
-
 .header {
   border-bottom: calc($size-1 / 6) solid $gray-12;
   position: sticky;
