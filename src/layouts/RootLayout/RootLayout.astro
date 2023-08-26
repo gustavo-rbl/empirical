@@ -1,0 +1,49 @@
+---
+import { format } from "date-fns";
+import { pageName } from "../../store/store";
+import style from "./RootLayout.module.scss";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const date = new Date();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageName} - {title}</title>
+  </head>
+  <body class={style.body}>
+    <header class={style.header}>
+      <div class={style.header_container}>
+        <h2>
+          <a href="/">
+            {pageName}
+          </a>
+        </h2>
+
+        <h2 class={style.header_container_date}>{format(date, "MMMM do")}</h2>
+      </div>
+    </header>
+
+    <main>
+      <div class={style.container1000}>
+        <slot />
+      </div>
+    </main>
+
+    <footer class={style.footer}>
+      <div class={style.footer_container}>
+        {pageName} - {format(date, "y")}
+      </div>
+    </footer>
+  </body>
+</html>
