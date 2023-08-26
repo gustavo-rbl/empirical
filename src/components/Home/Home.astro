@@ -1,0 +1,26 @@
+---
+import { pages } from "../../store/store";
+import style from "./Home.module.scss";
+import globalStyle from "../../style/Global.module.scss";
+---
+
+<section class={globalStyle.jelloDisplay1000}>
+  {
+    pages ? (
+      <>
+        <h2 class={style.hero}>Project Library</h2>
+
+        <div class={style.cards}>
+          {pages.map((page: { id: number; name: string; thumbnail: string }) => (
+            <a href={page.name} class={style.card}>
+              <h2 class={style.card_name}>{page.name}</h2>
+              <img src={page.thumbnail} alt={page.name} class={style.card_img} />
+            </a>
+          ))}
+        </div>
+      </>
+    ) : (
+      <h2 class={style.hero}>Welcome to Empirical</h2>
+    )
+  }
+</section>

@@ -1,0 +1,48 @@
+@use "../../style/index.scss" as *;
+
+.hero {
+  font-size: $size-fluid-2;
+}
+
+.cards {
+  display: grid;
+  place-content: center;
+  margin-top: $size-2;
+  gap: $size-2;
+
+  @include mediaQuery("tablet") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mediaQuery("desktop") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  @include transitionAll($duration-pri);
+  border: $border-pri;
+  position: relative;
+  z-index: 10;
+
+  &:where(:hover, :focus) {
+    transform: translateY(-2%);
+  }
+
+  &_name {
+    position: absolute;
+    top: calc($size-1 * -0.5);
+    right: calc($size-1 * -1);
+    background-color: $indigo-12;
+    border: $border-pri;
+    color: $gray-0;
+    padding: calc($size-1 / 2) $size-1;
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+
+  &_img {
+    display: block;
+    width: 100%;
+  }
+}
