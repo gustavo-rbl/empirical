@@ -2,6 +2,7 @@
 import { format } from "date-fns";
 import { pageName } from "../../store/store";
 import style from "./RootLayout.module.scss";
+import githubIcon from "../../assets/icon/github.svg";
 
 interface Props {
   title: string;
@@ -42,6 +43,10 @@ const date = new Date();
       <div class={style.footer_container}>
         {pageName} - {format(date, "y")}
       </div>
+
+      <a href="https://github.com/gustavo-rbl" target="_blank" class={style.footer_githubIcon}>
+        <img src={githubIcon} alt="Github Icon" />
+      </a>
     </footer>
   </body>
 </html>

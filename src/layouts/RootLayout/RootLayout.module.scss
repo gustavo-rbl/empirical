@@ -35,9 +35,21 @@
   background-color: $gray-12;
   color: $gray-0;
   margin-top: auto;
+  padding: $size-1;
 
   &_container {
     @include jelloDisplay(1200px, $fontKarla, $size-1, $size-1);
     text-align: center;
+  }
+
+  &_githubIcon {
+    display: block;
+    width: $size-2;
+    margin: auto;
+
+    &:where(:hover, :focus) {
+      @include transitionAll($duration-pri);
+      transform: translateY(-5%);
+    }
   }
 }
