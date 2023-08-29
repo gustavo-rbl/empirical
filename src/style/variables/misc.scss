@@ -1,0 +1,6 @@
+@use "./color.scss" as *;
+@use "./size.scss" as *;
+
+$duration-pri: 250ms;
+
+$border-pri: calc($size-1 / 4) solid $gray-12;

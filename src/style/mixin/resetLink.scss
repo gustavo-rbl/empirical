@@ -1,0 +1,5 @@
+@mixin resetLink($color) {
+  display: block;
+  text-decoration: none;
+  color: $color;
+}

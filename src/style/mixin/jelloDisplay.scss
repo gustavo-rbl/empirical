@@ -1,0 +1,7 @@
+@mixin jelloDisplay($size, $fontFamily: null, $fontSize: null, $padding: null) {
+  max-width: $size;
+  margin-inline: auto;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  padding: $padding;
+}
