@@ -1,0 +1,202 @@
+@use "../../style/index.scss" as *;
+
+.header {
+  background-color: $gray-0;
+  border-bottom: 1px solid $gray-5;
+  position: sticky;
+  top: 0;
+
+  &_container {
+    @include jelloDisplay(1200px, $fontInconsolata, $size-fluid-2, $size-1);
+  }
+}
+
+.main {
+  &_container {
+    @include jelloDisplay(1000px, $fontInconsolata, $size-fluid-1, $size-1);
+    padding-block: $size-4;
+  }
+
+  &_banner {
+    @extend .image_cover_center;
+    @include displayFlex($size-1, nowrap, column, center, center);
+    background-image: url(https://images.unsplash.com/photo-1498049860654-af1a5c566876?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=MnwxfDB8MXxyYW5kb218MHx8b2ZmaWNlfHx8fHx8MTY5Mzk0ODIwOA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=900);
+    min-height: 80vh;
+
+    &_heading {
+      color: $orange-8;
+      font-size: $size-fluid-5;
+      font-weight: 900;
+    }
+  }
+}
+
+.text {
+  margin: $size-4 auto;
+  max-width: 600px;
+
+  &_accent {
+    color: $blue-10;
+  }
+
+  &_bold {
+    font-weight: bold;
+  }
+
+  & * {
+    margin-top: $size-1;
+  }
+}
+
+.collageV01 {
+  @include displayGrid(repeat(10, 1fr), repeat(10, 1fr));
+
+  &_area_1 {
+    aspect-ratio: 1;
+    background-color: $yellow-1;
+    grid-area: 1 / 5 / 11 / 11;
+  }
+
+  &_area_2 {
+    @extend .image_cover_center;
+    grid-area: 2 / 1 / 10 / 6;
+    background-image: url(https://source.unsplash.com/random/300x300/?office);
+  }
+
+  &_area_3 {
+    @extend .image_cover_center;
+    grid-area: 3 / 7 / 9 / 10;
+    background-image: url(https://source.unsplash.com/random/300x300/?business);
+  }
+}
+
+.collageV02 {
+  @include displayGrid(repeat(10, 1fr), repeat(11, 1fr));
+
+  &_area_1 {
+    aspect-ratio: 1;
+    background-color: $green-1;
+    grid-area: 1 / 1 / 12 / 8;
+  }
+
+  &_area_2 {
+    @extend .image_cover_center;
+    grid-area: 3 / 7 / 9 / 11;
+    background-image: url(https://source.unsplash.com/random/300x300/?studio);
+  }
+
+  &_area_3 {
+    @extend .image_cover_center;
+    grid-area: 2 / 2 / 6 / 6;
+    background-image: url(https://source.unsplash.com/random/300x300/?teaching);
+  }
+
+  &_area_4 {
+    @extend .image_cover_center;
+    grid-area: 7 / 2 / 11 / 6;
+    background-image: url(https://source.unsplash.com/random/300x300/?book);
+  }
+}
+
+.collageV03 {
+  @include displayGrid(repeat(10, 1fr), repeat(10, 1fr));
+
+  &_area_1 {
+    aspect-ratio: 1;
+    background-color: $purple-1;
+    grid-area: 1 / 2 / 11 / 10;
+  }
+
+  &_area_2 {
+    @extend .image_cover_center;
+    grid-area: 2 / 6 / 10 / 11;
+    background-image: url(https://source.unsplash.com/random/300x300/?presentation);
+  }
+
+  &_area_3 {
+    @extend .image_cover_center;
+    grid-area: 4 / 1 / 8 / 5;
+    background-image: url(https://source.unsplash.com/random/300x300/?meeting);
+  }
+}
+
+.collageV04 {
+  @include displayGrid(1fr, 1fr);
+
+  &_area_1 {
+    @extend .image_cover_center;
+    background-image: url(https://source.unsplash.com/random/300x300/?working);
+    aspect-ratio: 1 / 0.4;
+  }
+
+  &_area_2 {
+    background-color: $blue-1;
+    display: grid;
+    gap: $size-1;
+    padding: $size-2;
+    place-content: center;
+  }
+
+  @include mediaQuery("desktop") {
+    @include displayGrid(repeat(2, 1fr), 1fr);
+
+    &_area_1 {
+      aspect-ratio: 1;
+    }
+
+    &_area_2 {
+      padding-inline: $size-4;
+    }
+  }
+}
+
+.footer {
+  border-top: 1px solid $gray-5;
+  padding-block: $size-4;
+
+  &_container {
+    @include jelloDisplay(1200px, $fontInconsolata, $size-fluid-2, $size-1);
+  }
+}
+
+.contact {
+  &_section {
+    @include displayFlex($size-1, wrap, column, start, start);
+    font-size: $size-fluid-1;
+
+    ul {
+      @include resetList;
+
+      & li:first-child {
+        font-weight: bold;
+      }
+    }
+
+    @include mediaQuery("desktop") {
+      @include displayFlex($size-1, wrap, row, start, space-between);
+    }
+  }
+}
+
+.email {
+  max-width: 500px;
+
+  &_sign_up {
+    display: flex;
+    margin-top: $size-1;
+
+    & input {
+      background-color: $gray-3;
+      border: none;
+      padding: 5px;
+    }
+
+    & button {
+      background-color: $blue-10;
+      border: none;
+      color: $gray-0;
+      cursor: pointer;
+      padding: 5px 10px;
+    }
+  }
+}

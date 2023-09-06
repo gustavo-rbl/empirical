@@ -2,6 +2,7 @@
 @forward "./base/reset.scss";
 @forward "./base/mediaQuery.scss";
 @forward "./base/font.scss";
+@forward "./base/utils.scss";
 
 // variables
 @forward "./variables/color.scss";
@@ -13,3 +14,5 @@
 @forward "./mixin/jelloDisplay.scss";
 @forward "./mixin/resetLink.scss";
 @forward "./mixin/transitionAll.scss";
+@forward "./mixin/displayGrid.scss";
+@forward "./mixin/resetList.scss";
