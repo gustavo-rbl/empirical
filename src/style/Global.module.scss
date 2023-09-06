@@ -1,5 +1,0 @@
-@use "./index.scss" as *;
-
-.jelloDisplay1000 {
-  @include jelloDisplay(1000px, $fontInconsolata, $size-fluid-1, $size-1);
-}

@@ -1,5 +1,9 @@
 @use "../../style/index.scss" as *;
 
+.section {
+  @include jelloDisplay(1000px, $fontInconsolata, $size-fluid-1, $size-1);
+}
+
 .hero {
   font-size: $size-fluid-2;
 }
