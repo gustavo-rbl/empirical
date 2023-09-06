@@ -1,0 +1,38 @@
+@use "../../style/index.scss" as *;
+
+.body {
+  position: relative;
+}
+
+.section {
+  background-color: $gray-12;
+  color: $gray-0;
+  margin-top: auto;
+  padding: $size-1;
+
+  &_container {
+    @include jelloDisplay(1200px, $fontKarla, $size-1, $size-1);
+  }
+
+  &_home {
+    @include resetLink($gray-0);
+    @include transitionAll($duration-pri);
+    width: max-content;
+    margin: auto;
+
+    &:where(:hover, :focus) {
+      box-shadow: inset 0px -2px 0px 0px;
+    }
+  }
+
+  &_githubIcon {
+    display: block;
+    width: $size-2;
+    margin: auto;
+
+    &:where(:hover, :focus) {
+      @include transitionAll($duration-pri);
+      transform: translateY(-5%);
+    }
+  }
+}

@@ -1,0 +1,38 @@
+---
+import { pageName } from "../../store/store";
+import githubIcon from "../../assets/icon/github.svg";
+import style from "./PageLayout.module.scss";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class={style.body}>
+    <slot />
+
+    <section class={style.section}>
+      <div class={style.section_container}>
+        <a href="/" class={style.section_home}>
+          {pageName} - Home
+        </a>
+      </div>
+
+      <a href="https://github.com/gustavo-rbl" target="_blank" class={style.section_githubIcon}>
+        <img src={githubIcon} alt="Github Icon" />
+      </a>
+    </section>
+  </body>
+</html>
