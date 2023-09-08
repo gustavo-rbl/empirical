@@ -1,0 +1,245 @@
+---
+import { slide } from "astro:transitions";
+import style from "./Balmy.module.scss";
+---
+
+<>
+  <header>
+    <div class={style.header_container}>
+      <h2 class={style.hero}>Balmy</h2>
+    </div>
+  </header>
+
+  <main>
+    <div class={style.main_container}>
+      <div class={style.collageV01}>
+        <div class={style.collageV01_area_1}>
+          <p class={style.buttonV01}>Why Balmy</p>
+          <h2 class={style.hero}>Music in your hands. Without the barriers.</h2>
+
+          <p>
+            Full-service production, a global retail network, customer support - and you keep up to
+            85% of profits
+          </p>
+        </div>
+
+        <div class={style.collageV01_area_2}>
+          <img
+            src="https://source.unsplash.com/random/400x600/?vinyl"
+            alt="Random vinyl image from unsplash"
+          />
+        </div>
+
+        <div class={style.collageV01_area_3}>
+          <img
+            src="https://source.unsplash.com/random/400x600/?music"
+            alt="Random music image from unsplash"
+          />
+        </div>
+      </div>
+
+      <p class={`${style.hero} ${style.bracketV01}`}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, mollitia!
+      </p>
+
+      <div class={style.cards}>
+        <div class={`${style.card} ${style.yellow}`}>
+          <h3>Lorem, ipsum.</h3>
+          <img
+            src="https://source.unsplash.com/random/300x300/?concert"
+            alt="Random music image from unsplash"
+          />
+          <h2>Lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nam mollitia maxime esse
+            neque voluptas perferendis nostrum ipsum molestias iusto explicabo quaerat,
+            necessitatibus qui. Ullam illum nemo perferendis a esse.
+          </p>
+          <p class={style.buttonV02}>Lorem, ipsum dolor.</p>
+        </div>
+
+        <div class={`${style.card} ${style.sand}`}>
+          <h3>Lorem, ipsum.</h3>
+          <img
+            src="https://source.unsplash.com/random/300x300/?cassette"
+            alt="Random music image from unsplash"
+          />
+          <h2>Lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nam mollitia maxime esse
+            neque voluptas perferendis nostrum ipsum molestias iusto explicabo quaerat,
+            necessitatibus qui. Ullam illum nemo perferendis a esse.
+          </p>
+          <p class={style.buttonV02}>Lorem, ipsum dolor.</p>
+        </div>
+      </div>
+
+      <div class={`${style.hero} ${style.bracketV01}`}>
+        <h2>Find your fit</h2>
+        <p>Choose the best Qrates project type to suit your needs</p>
+      </div>
+
+      <div class={style.cards}>
+        <div class={`${style.card} ${style.sand}`}>
+          <h3>Lorem, ipsum.</h3>
+          <img
+            src="https://source.unsplash.com/random/300x300/?spotlight"
+            alt="Random music image from unsplash"
+          />
+          <h2>Lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nam mollitia maxime esse
+            neque voluptas perferendis nostrum ipsum molestias iusto explicabo quaerat,
+            necessitatibus qui. Ullam illum nemo perferendis a esse.
+          </p>
+          <p class={style.buttonV02}>Lorem, ipsum dolor.</p>
+        </div>
+
+        <div class={`${style.card} ${style.cyan}`}>
+          <h3>Lorem, ipsum.</h3>
+          <img
+            src="https://source.unsplash.com/random/300x300/?theatre"
+            alt="Random music image from unsplash"
+          />
+          <h2>Lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nam mollitia maxime esse
+            neque voluptas perferendis nostrum ipsum molestias iusto explicabo quaerat,
+            necessitatibus qui. Ullam illum nemo perferendis a esse.
+          </p>
+
+          <p class={style.buttonV02}>Lorem, ipsum dolor.</p>
+        </div>
+      </div>
+
+      <p class={`${style.hero} ${style.bracketV02}`}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, mollitia?
+      </p>
+
+      <div>
+        <div class={style.card}>
+          <h3>Lorem, ipsum.</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nam mollitia maxime esse
+            neque voluptas perferendis nostrum ipsum molestias iusto explicabo quaerat,
+            necessitatibus qui. Ullam illum nemo perferendis a esse.
+          </p>
+          <p class={style.buttonV02}>Lorem, ipsum dolor.</p>
+        </div>
+
+        <table class={style.table}>
+          <tbody>
+            <tr>
+              <th>Lorem ipsum dolor sit amet.</th>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque.</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet.</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class={style.table}>
+          <tbody>
+            <tr>
+              <th>Lorem ipsum dolor sit amet.</th>
+            </tr>
+            <tr>
+              <td>Lorem, ipsum.</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet.</td>
+            </tr>
+            <tr>
+              <td>Lorem.</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class={style.table}>
+          <tbody>
+            <tr>
+              <th>Lorem ipsum dolor sit amet.</th>
+            </tr>
+            <tr>
+              <td>Lorem, ipsum.</td>
+            </tr>
+            <tr>
+              <td>Lorem.</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet consectetur.</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet.</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class={`${style.card} ${style.pink}`}>
+          <img
+            src="https://source.unsplash.com/random/300x300/?retro"
+            alt="Random music image from unsplash"
+          />
+          <h3>Lorem, ipsum.</h3>
+          <h2>Lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nam mollitia maxime esse
+            neque voluptas perferendis nostrum ipsum molestias iusto explicabo quaerat,
+            necessitatibus qui. Ullam illum nemo perferendis a esse.
+          </p>
+          <p class={style.buttonV02}>Lorem, ipsum dolor.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class={style.footer}>
+      <div class={style.footer_container}>
+        <h2 class={style.text_bold}>Balmy</h2>
+
+        <div class={style.contact}>
+          <ul>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem.</li>
+          </ul>
+
+          <ul>
+            <li>Lorem.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem ipsum dolor sit.</li>
+          </ul>
+
+          <ul>
+            <li>Lorem.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem ipsum dolor sit.</li>
+          </ul>
+
+          <ul>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem ipsum dolor sit.</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </main>
+</>

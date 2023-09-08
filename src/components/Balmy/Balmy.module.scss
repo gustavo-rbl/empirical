@@ -1,0 +1,226 @@
+@use "../../style/index.scss" as *;
+
+$pri-padding: $size-2;
+$pri-brd: 2px solid $gray-12;
+
+.header {
+  &_container {
+    @include jelloDisplay(1400px, $size-1);
+    padding: $pri-padding;
+  }
+}
+
+.main {
+  &_container {
+    @include jelloDisplay(1200px, $size-1);
+    font-family: $fontInconsolata;
+  }
+}
+
+.footer {
+  background-color: $gray-12;
+  color: $gray-0;
+  padding-top: $size-4;
+
+  &_container {
+    @include jelloDisplay(1200px, $fontInconsolata, $size-fluid-2, $size-1);
+  }
+}
+
+.collageV01 {
+  @include displayGrid(1fr, repeat(3, auto));
+  gap: $size-3;
+  padding: $pri-padding;
+  overflow-x: hidden;
+  grid-template-areas:
+    "area1"
+    "area2"
+    "area3";
+
+  &_area_1 {
+    grid-area: area1;
+    & h2 {
+      margin-bottom: $size-1;
+    }
+    margin-bottom: $size-1;
+  }
+
+  &_area_2 {
+    grid-area: area2;
+    @include displayGrid(1fr, 1fr);
+    justify-items: end;
+
+    & img {
+      display: block;
+      border: $pri-brd;
+      transform: rotate(10deg);
+      width: 90%;
+    }
+  }
+
+  &_area_3 {
+    grid-area: area3;
+    & img {
+      border: $pri-brd;
+      transform: rotate(-10deg) translateY(calc($size-6 * -1));
+      width: 90%;
+    }
+  }
+
+  @include mediaQuery("tablet") {
+    @include displayGrid(1fr 2fr, 1fr);
+    gap: 0;
+    overflow-x: hidden;
+    grid-template-areas:
+      "area1 area2"
+      "area3 area3";
+
+    &_area_2 {
+      margin-top: $size-4;
+    }
+
+    & img {
+      width: clamp(200px, 70vw, 500px);
+    }
+  }
+
+  @include mediaQuery("desktop") {
+    &_area_2 {
+      justify-items: start;
+    }
+
+    &_area_3 {
+      & img {
+        transform: rotate(-10deg) translateX(30%);
+      }
+    }
+  }
+}
+
+.cards {
+  @include displayFlex(0, wrap, row, center, center);
+}
+
+.card {
+  text-align: center;
+  flex: 1;
+
+  padding: $pri-padding;
+
+  & h3 {
+    @extend .buttonV01;
+    background-color: $gray-0;
+    margin: auto;
+  }
+
+  & h2 {
+    font-family: $fontKarla;
+    font-size: $size-fluid-2;
+    font-weight: 900;
+    margin-block: $size-1;
+  }
+
+  & p {
+    margin: $size-1 auto;
+    max-width: 600px;
+  }
+
+  & img {
+    border: $pri-brd;
+    margin: $size-1 auto;
+    width: clamp(200px, 40vw, 350px);
+  }
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  border: $pri-brd;
+
+  & th {
+    padding: $size-1;
+    font-size: $size-fluid-2;
+    background-color: $gray-12;
+    color: $gray-0;
+    font-family: $fontKarla;
+  }
+
+  & td {
+    padding: $size-1;
+    border: $pri-brd;
+  }
+}
+
+.contact {
+  @include displayFlex($size-1, wrap, column, start, start);
+  font-size: $size-fluid-1;
+
+  ul {
+    @include resetList;
+
+    & li:first-child {
+      font-weight: bold;
+    }
+  }
+
+  @include mediaQuery("desktop") {
+    @include displayFlex($size-1, wrap, row, start, space-between);
+  }
+}
+
+.hero {
+  font-family: $fontKarla;
+  font-size: $size-fluid-2;
+  font-weight: 900;
+}
+
+.buttonV01 {
+  @include transitionAll($duration-pri);
+  border: $pri-brd;
+  font-family: $fontKarla;
+  padding: 5px 10px;
+  width: max-content;
+}
+
+.buttonV02 {
+  @include transitionAll($duration-pri);
+  background-color: $gray-12;
+  border-radius: 20px;
+  color: $gray-0;
+  cursor: pointer;
+  margin: auto;
+  padding: 5px 20px;
+  width: max-content;
+
+  &:where(:hover, :focus) {
+    transform: scale(1.1);
+  }
+}
+
+.bracketV01 {
+  border-block: $pri-brd;
+  padding-block: $pri-padding;
+  text-align: center;
+}
+
+.bracketV02 {
+  @extend .bracketV01;
+  background-color: $gray-12;
+  color: $gray-0;
+}
+
+.yellow {
+  background-color: $yellow-3;
+}
+
+.sand {
+  background-color: $sand-3;
+}
+
+.cyan {
+  background-color: $cyan-8;
+}
+
+.pink {
+  background-color: $pink-4;
+}
