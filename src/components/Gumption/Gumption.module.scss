@@ -1,0 +1,186 @@
+@use "../../style/index.scss" as *;
+@use "sass:math";
+$pri-padding: $size-1;
+$pri-clr: $teal-6;
+$pri-brd-rad: 10px;
+
+.header {
+  &_container {
+    @include jelloDisplay(1400px, $fontKarla, $size-fluid-2, $size-1);
+  }
+}
+
+.main {
+  position: relative;
+  overflow: hidden;
+
+  &_container {
+    @include jelloDisplay(1200px, $fontInconsolata, $size-fluid-1, $size-1);
+
+    &_hero {
+      font-size: $size-fluid-2;
+      margin-bottom: $size-2;
+    }
+  }
+}
+
+.cards_flex {
+  @include displayFlex($size-1, wrap, column, stretch, space-around);
+  margin-bottom: $size-3;
+
+  @include mediaQuery("tablet") {
+    @include displayFlex($size-1, wrap, row, stretch, space-around);
+  }
+}
+
+.cardV01 {
+  @include displayFlex($size-1, nowrap, column, flex-start);
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px $gray-12;
+  flex: 1;
+  overflow: hidden;
+  padding: $pri-padding;
+  position: relative;
+
+  &_title {
+    font-size: $size-fluid-2;
+  }
+
+  &_popular {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: 100% 100%;
+    transform: translateY(-100%) rotate(-90deg) translateX(#{math.sqrt(math.pow(100, 2) / 2) * -1%})
+      rotate(135deg);
+    background-color: $pri-clr;
+    color: $gray-0;
+    font-weight: 900;
+    padding: 0 $size-2;
+  }
+
+  &_price {
+    font-size: $size-fluid-2;
+  }
+
+  &_bracket {
+    background-color: $pri-clr;
+    height: 3px;
+    width: 100%;
+    border-radius: $pri-brd-rad;
+  }
+
+  &_benefits {
+    padding: $pri-padding;
+    list-style: none;
+
+    & li:before {
+      content: "\2714";
+      margin-right: $size-1;
+      color: $pri-clr;
+    }
+
+    &_bottom_sticky {
+      margin-top: auto;
+      width: 50%;
+      text-align: center;
+    }
+  }
+}
+
+.cardV02 {
+  @include displayFlex($size-1, wrap, center, center);
+  background-color: #fff;
+  border-radius: $pri-brd-rad;
+  box-shadow: 0 0 60px 0 rgba(2, 4, 69, 0.05);
+  margin-bottom: $size-2;
+  padding: calc($pri-padding * 2);
+
+  &_description {
+    flex-basis: 80%;
+    min-width: 200px;
+
+    & h2 {
+      font-size: $size-fluid-2;
+      font-weight: 900;
+    }
+  }
+
+  &_price {
+    font-size: $size-fluid-2;
+    font-weight: 900;
+
+    &_period {
+      font-size: $size-fluid-1;
+    }
+  }
+}
+
+.cardV03 {
+  @include displayFlex($size-1, wrap, center, center);
+  background-color: $blue-0;
+  border-radius: $pri-brd-rad;
+  font-size: $size-fluid-2;
+  padding: calc($pri-padding * 2);
+  margin-bottom: $size-2;
+
+  &_description {
+    flex-basis: 70%;
+  }
+
+  &_button {
+    font-size: $size-fluid-1;
+  }
+}
+
+.question {
+  @include displayFlex($size-1, wrap, row, flex-start, space-between);
+
+  &_text {
+    @include transitionAll($duration-pri);
+    cursor: pointer;
+    font-family: $fontKarla;
+    font-size: $size-fluid-2;
+    margin-block: $size-1;
+
+    &:where(:hover, :focus) {
+      color: $pri-clr;
+    }
+  }
+}
+
+.shape {
+  background-color: $blue-0;
+  height: 120vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  z-index: -10;
+  clip-path: polygon(100% 0, 35% 0, 100% 100%);
+}
+
+.hero {
+  font-family: $fontKarla;
+  font-size: $size-fluid-2;
+  text-align: center;
+}
+
+.buttonV01 {
+  @include transitionAll($duration-pri);
+  background-color: $pri-clr;
+  border-radius: $pri-brd-rad;
+  color: $gray-0;
+  cursor: pointer;
+  font-weight: 900;
+  margin-inline: auto;
+  padding: 5px $size-1;
+
+  &:where(:hover, :focus) {
+    transform: scale(1.1);
+  }
+}
+
+.text_accent {
+  color: $pri-clr;
+}

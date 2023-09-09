@@ -3,6 +3,7 @@ const pageName = "Empirical";
 // page thumbnail
 import debonairThumbnail from "../assets/pageImg/debonair.jpg";
 import balmyThumbnail from "../assets/pageImg/balmy.jpg";
+import gumptionThumbnail from "../assets/pageImg/gumption.jpg";
 
 const pages = [
   {
@@ -14,6 +15,11 @@ const pages = [
     id: 2,
     name: "balmy",
     thumbnail: balmyThumbnail,
+  },
+  {
+    id: 3,
+    name: "gumption",
+    thumbnail: gumptionThumbnail,
   },
 ];
 
